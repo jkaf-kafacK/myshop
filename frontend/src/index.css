@@ -1,0 +1,160 @@
+html{
+  font-size: 60.5%;
+  box-sizing: border-box;
+}
+body{
+  font: 1.6rem Helvetica, Arial, sans-serif;
+  height: 100vh;
+  margin: 0;
+  
+}
+#root{
+  height: 100%;
+}
+.grid-container{
+  display: grid;
+  grid-template-areas: 
+  "header"
+  "main"
+  "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: 5rem 1fr 5rem;
+  height: 100%;
+}
+.header{
+  grid-area: header;
+  min-height: 40px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom : 1px solid #ddd;
+  padding: 10px;
+}
+.brand a{
+  color: teal;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+.header-links a{
+  color: teal;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 1rem;
+}
+a.brand{
+  color: teal;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 1rem;
+}
+.header-links a:hover{
+  color: tomato;
+}
+.main{
+  grid-area: main;
+}
+.footer{
+  grid-area: footer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}/*common*/
+h2 {
+  font-size: 1.6rem;
+  padding: 1rem 0;
+}
+a{
+  text-decoration: none;
+}
+a:hover{
+  color:#ff8000;
+}
+/* home Screen*/
+
+
+.content{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 1rem;
+  padding: -1rem;
+  margin: 1rem;
+ 
+ 
+}
+.row.content {
+  justify-content: center;
+  
+}
+.product {
+  border: 0.1rem #c0c0c0 solid;
+  background-color: #f8f8f8;
+  border-radius: 0.5rem;
+  margin: .1rem;
+  padding: 0.1px;
+  
+}
+
+.product-name{
+  padding: 1rem;
+}
+.product-name > *{
+  margin-bottom: 0.1rem;
+}
+.product-price{
+  font-size: 2rem;
+}
+img {
+  border-radius: 0.5rem;
+}
+img.images{
+  max-width: 30rem;
+  width: 100%;
+  padding: .1rem;
+}
+/* Rating */
+.product-star span {
+  color:teal;
+  margin: 0.1rem;
+}
+
+.product-star span:last-child {
+  color: #404040;;
+}
+/*sidebar*/
+.brand button{
+  
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+.sidebar{
+  position: fixed;
+  transition: all 0.5s;
+  transform: translate(-30rem);
+  width: 30rem;
+  background-color: #d1c4c4;
+  height: 100%;
+}
+.sidebar.open{
+  transform: translate(0);
+}
+.sidebar-close-button{
+  border-radius: 50%;
+    border: 1rem;
+    width: 3rem;
+    padding: .5rem;
+    font-size: 2rem;
+    padding-top: 3px;
+    cursor: pointer;
+    position: absolute;
+    right: .5rem;
+    top: 2rem;
+}
